@@ -1,0 +1,19 @@
+{
+  "name": "sizeresize",
+  "version": "1.0.0",
+  "description": "A group of helper functions that allow you to run various functions at different screen sizes when resize has ended.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Resize"
+  ],
+
+  "author": "Dan Blake <dan@designbyblake.com> (http://www.designbyblake.com)",
+  "license": "MIT",
+  "repository" :{ 
+    "type" : "git",
+    "url" : "https://github.com/designbyblake/sizeresize.git"
+  }
+}
