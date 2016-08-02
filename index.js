@@ -1,4 +1,5 @@
 global.sizeResize = {
+ 	xlarge:[],
  	large:[],
  	medium:[],
  	small:[],
@@ -7,6 +8,9 @@ global.sizeResize = {
  	$body:'',
 	mobile_width_max:768,
 	tablet_width_max:1024, 	
+	addXlarge: function(func){
+		this.xlarge.push(func);
+	},
 	addLarge:function(func){
  		this.large.push(func);
  	},
@@ -49,12 +53,12 @@ global.sizeResize = {
  	init:function(){
  		this.$the_window = window;
  		this.$body = document.body;
- 		document.body.style.backgroundColor = "yellow";
- 		var resizeTimer;
+
+ 		var resizeEnd;
  		window.onresize = function() {
 			
-			clearTimeout(resizeTimer);
-			resizeTimer = setTimeout(function() {
+			clearTimeout(resizeEnd);
+			resizeEnd = setTimeout(function() {
 
 			    // Run code here, resizing has "stopped"
 			    sizeResize.sizecheck();
