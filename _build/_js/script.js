@@ -1,0 +1,1 @@
+var sizeResize = require('./index.js');

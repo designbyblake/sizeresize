@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SizeResize Sample</title>
+	
+	<style>
+		.sizer{
+			height:400px;
+			background:#EEE;
+			position: relative;
+		}
+		.sizer--large, .sizer--medium, .sizer--small{
+			position: absolute;
+			top:0;
+			left:0;
+		}
+		.sizer--large{
+			width:1200px;
+			background:#999;
+			z-index: 2; 
+		}
+
+		.sizer--medium{
+			width:1024px;
+			background:#666;
+			z-index: 3;
+		}
+
+		.sizer--small{
+			background:#333;
+			width:640px;
+			z-index: 4;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>SizeResize Sample</h1>
+
+	<div class="sizer">
+		<div class="sizer sizer--large">
+			<div class="sizer sizer--medium">
+				<div class="sizer sizer--small">
+			
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="index.js"></script>
+	<script>
+		function a(){
+			console.log('a');
+		}
+		function b(text, text2, text3){
+			console.log("testing stuff " + text);
+			if(text2 !== undefined){
+				console.log("this is " + text2);
+			}
+			if(text3 !== undefined){
+				console.log("Here we go " + text3);
+			}
+		}
+		function x(test){
+			console.log('x' + test);
+		}
+		function l(){
+			console.log('l');
+		}
+		function m(){
+			console.log('m');
+		}
+		function s(){
+			console.log('s');
+		}
+		sizeResize.small_max = 480;
+		sizeResize.medium_max=600;
+		sizeResize.addAny(b,["woop", "tet", "yeah boy"]);
+		sizeResize.addAny(b);
+		sizeResize.addXlarge(x,['boom']);
+		// sizeResize.addLarge(l);
+		// sizeResize.addMedium(m);
+		// sizeResize.addSmall(s);
+		sizeResize.init();
+	</script>
+</body>
+</html>
