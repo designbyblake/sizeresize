@@ -22,6 +22,6 @@
   },
   "scripts":{
     "build:js": "cp _build/_js/index.js index.js && browserify _build/_js/script.js -d -o sizeresize.js -t [ babelify --presets [ es2015 ] ]",
-    "build:js:prod": "cp _build/_js/index.js index.js && browserify _build/_js/script.js -o sizeresize.js -t [ babelify --presets [ es2015 ] ]",
+    "build:js:prod": "cp _build/_js/index.js index.js && browserify _build/_js/script.js -o sizeresize.js -t [ babelify --presets [ es2015 ] ]"
   }
 }

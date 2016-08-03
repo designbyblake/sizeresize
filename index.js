@@ -1,5 +1,4 @@
-//global.sizeResize = {
-var sizeResize = {
+global.sizeResize = {
  	xlarge:[],
  	large:[],
  	medium:[],
@@ -100,4 +99,4 @@ var sizeResize = {
 		}
  	}
 };
-//module.exports = sizeResize;
+module.exports = sizeResize;
