@@ -44,17 +44,22 @@ var breakpoints = {
 sizeResize.addSmall(breakpoints.small);
 
 // Adds our fake functions to remaining sizes
-sizeResize.addMedium(foo);
-sizeResize.addLarge(bar);
-sizeResize.addXlarge(baz);
+sizeResize.addMedium(breakpoints.foo);
+sizeResize.addLarge(breakpoints.bar);
+sizeResize.addXlarge(breakpoints.baz);
 
 // Adds the function to all breakpoints
 // Parameters are passed in as an array
 sizeResize.addAny(breakpoints.all, ['The first parameter', 'Param 2']);
 
 
-// Initialize sizeResize. 
+// Initialize sizeResize; This starts the window resize listener.
+// This will also immediately call any functions for the current breakpoint and addAny
 sizeResize.init();
+
+
+
+
 ```
 
 
