@@ -7,7 +7,7 @@ I wrote SizeResize to make it easy call JavaScript functions at different browse
 ## Key Features
 * 4 different breakpoints to call functions
 * A catch all if you want to call a function on every change in breakpoint 
-* On resize if breakpoints do not change no functions are called
+* Functions are only called if the breakpoint changes
 * window.onresize event waits for resize event to end before checking if functions need to be called (huge performance boost)
 * Default settings are easily to change 
 
