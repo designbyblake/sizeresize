@@ -50,39 +50,59 @@
 
 	<script src="sizeresize.js"></script>
 	<script>
-		function a(){
-			console.log('a');
-		}
-		function b(text, text2, text3){
-			console.log("testing stuff " + text);
-			if(text2 !== undefined){
-				console.log("this is " + text2);
-			}
-			if(text3 !== undefined){
-				console.log("Here we go " + text3);
-			}
-		}
-		function x(test){
-			console.log('x' + test);
-		}
-		function l(){
-			console.log('l');
-		}
-		function m(){
-			console.log('m');
-		}
-		function s(){
-			console.log('s');
-		}
-		sizeResize.small_max = 480;
-		sizeResize.medium_max=600;
-		sizeResize.addAny(b,["woop", "tet", "yeah boy"]);
-		sizeResize.addAny(b);
-		sizeResize.addXlarge(x,['boom']);
-		// sizeResize.addLarge(l);
-		// sizeResize.addMedium(m);
-		// sizeResize.addSmall(s);
-		sizeResize.init();
+		// function a(){
+		// 	console.log('a');
+		// }
+		// function b(text, text2, text3){
+		// 	console.log("testing stuff " + text);
+		// 	if(text2 !== undefined){
+		// 		console.log("this is " + text2);
+		// 	}
+		// 	if(text3 !== undefined){
+		// 		console.log("Here we go " + text3);
+		// 	}
+		// }
+		// function x(test){
+		// 	console.log('x' + test);
+		// }
+		// function l(){
+		// 	console.log('l');
+		// }
+		// function m(){
+		// 	console.log('m');
+		// }
+		// function s(){
+		// 	console.log('s');
+		// }
+		// sizeResize.small_max = 480;
+		// sizeResize.medium_max=600;
+		// sizeResize.addAny(b,["woop", "tet", "yeah boy"]);
+		// sizeResize.addAny(b);
+		// sizeResize.addXlarge(x,['boom']);
+		// // sizeResize.addLarge(l);
+		// // sizeResize.addMedium(m);
+		// // sizeResize.addSmall(s);
+		// sizeResize.init();
+
+		var breakpoints = {
+	small:function(){
+		console.log('Small');
+	},
+	all:function(text1, text2){
+		console.log('This is text1: ' + text1);
+		console.log('This is text2: ' + text2);
+	}
+}
+
+// Adds the function to the small breakpoint. Note there are no parenthesis.
+sizeResize.addSmall(breakpoints.small);
+
+// Adds the function to all breakpoints
+// Parameters are passed in as an array
+sizeResize.addAny(breakpoints.all, ['The first parameter', 'Param 2']);
+
+// Initialize sizeResize. 
+sizeResize.init();
 	</script>
 </body>
 </html>

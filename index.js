@@ -9,6 +9,7 @@ global.sizeResize = {
 	small_max:640,
 	medium_max:1024,
 	large_max:1200,
+	pause:250,
 	currentSize:'',
 	previousSize:'',
 	addXlarge: function(func, params){
@@ -94,7 +95,7 @@ global.sizeResize = {
 			endResizeEvent = setTimeout(function() {
 			    // Run code here, resizing has "stopped"
 			    sizeResize.sizeCheck();
-			  }, 250);
+			  }, sizeResize.pause);
 			  
 		}
  	}
