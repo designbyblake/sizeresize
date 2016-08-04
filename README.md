@@ -4,6 +4,13 @@ When building responsive websites I have found that not only was I writting diff
 
 I wrote SizeResize to make it easy call JavaScript functions at different browser sizes. SizeResize does not rely on any JavaScript libraries, is globally scoped, easy to overwrite the default settings, performance focused and light weight (3kb unminified).
 
+## Key Features
+* 4 different breakpoints to call functions
+* A catch all if you want to call a function on every change in breakpoint 
+* On resize if breakpoints do not change no functions are called
+* window.onresize event waits for resize event to end before checking if functions need to be called (huge performance boost)
+* Default settings are easily to change 
+
 ## Install
 
 With [npm](https://www.npmjs.com/) do:
@@ -42,7 +49,8 @@ sizeResize.init();
 ```
 
 
-## Documentation and Examples Coming Soon
+
+## More Documentation and Examples Coming Soon
 I hope to get documentation and examples complete by August 8th, 2016.
 
 ## To-do

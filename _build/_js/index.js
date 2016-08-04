@@ -9,7 +9,7 @@ global.sizeResize = {
 	small_max:640,
 	medium_max:1024,
 	large_max:1200,
-	pause:3000,
+	pause:250,
 	currentSize:'',
 	previousSize:'',
 	addXlarge: function(func, params){
