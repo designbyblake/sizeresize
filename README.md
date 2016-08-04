@@ -56,10 +56,6 @@ sizeResize.addAny(breakpoints.all, ['The first parameter', 'Param 2']);
 // Initialize sizeResize; This starts the window resize listener.
 // This will also immediately call any functions for the current breakpoint and addAny
 sizeResize.init();
-
-
-
-
 ```
 
 
