@@ -34,20 +34,28 @@ var breakpoints = {
 	all:function(text1, text2){
 		console.log('This is text1: ' + text1);
 		console.log('This is text2: ' + text2);
-	}
+	},
+	foo:function(){},
+	bar:function(){},
+	baz:function(){}
 }
 
 // Adds the function to the small breakpoint. Note there are no parenthesis.
 sizeResize.addSmall(breakpoints.small);
 
+// Adds our fake functions to remaining sizes
+sizeResize.addMedium(foo);
+sizeResize.addLarge(bar);
+sizeResize.addXlarge(baz);
+
 // Adds the function to all breakpoints
 // Parameters are passed in as an array
 sizeResize.addAny(breakpoints.all, ['The first parameter', 'Param 2']);
 
+
 // Initialize sizeResize. 
 sizeResize.init();
 ```
-
 
 
 ## More Documentation and Examples Coming Soon
