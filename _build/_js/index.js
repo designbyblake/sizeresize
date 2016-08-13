@@ -30,14 +30,13 @@ global.sizeResize = {
  	getWidth:function(){
 		return sizeResize.$the_window.innerWidth;
 	},
-	getCurrent:function(){
+	getCurrent:function(width){
 		sizeResize.previousSize = sizeResize.currentSize;
-		var window_width = sizeResize.getWidth();
-		if(window_width <= sizeResize.small_max){
+		if(width <= sizeResize.small_max){
 			sizeResize.currentSize = 'small';
-		}else if(window_width > sizeResize.small_max && window_width <= sizeResize.medium_max){
+		}else if(width > sizeResize.small_max && width <= sizeResize.medium_max){
 			sizeResize.currentSize = 'medium';
-		}else if(window_width > sizeResize.medium_max && window_width <= sizeResize.large_max){
+		}else if(width > sizeResize.medium_max && width <= sizeResize.large_max){
 			sizeResize.currentSize = 'large';
 		}else{
 			sizeResize.currentSize = 'xlarge';
@@ -76,7 +75,7 @@ global.sizeResize = {
 		}
 	},
  	sizeCheck:function(){
-		if(sizeResize.getCurrent() === sizeResize.previousSize){
+		if(sizeResize.getCurrent(sizeResize.getWidth()) === sizeResize.previousSize){
 			return false;
 		}
 		
@@ -86,7 +85,7 @@ global.sizeResize = {
  		this.$the_window = window;
  		this.$body = document.body;
 
- 		sizeResize.getCurrent();
+ 		sizeResize.getCurrent(sizeResize.getWidth());
  		sizeResize.runFunctions();
 
  		var endResizeEvent;

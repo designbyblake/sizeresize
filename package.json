@@ -4,6 +4,7 @@
   "description": "A group of helper functions that allow you to run various functions at different screen sizes when resize has ended.",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "build:js": "cp _build/_js/index.js index.js && browserify _build/_js/script.js -d -o sizeresize.js -t [ babelify --presets [ es2015 ] ]",
     "build:js:prod": "cp _build/_js/index.js index.js && browserify _build/_js/script.js -o sizeresize.js -t [ babelify --presets [ es2015 ] ]"
   },
@@ -19,6 +20,7 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
-    "browserify": "^13.1.0"
+    "browserify": "^13.1.0",
+    "jest-cli": "^14.1.0"
   }
 }
