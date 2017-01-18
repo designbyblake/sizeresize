@@ -4,8 +4,8 @@ global.sizeResize = {
  	medium:[],
  	small:[],
  	any:[],
- 	$the_window:'',
- 	$body:'',
+ 	$the_window:window,
+ 	$body:document.body,
 	small_max:640,
 	medium_max:1024,
 	large_max:1200,
@@ -82,9 +82,7 @@ global.sizeResize = {
 		sizeResize.runFunctions();
 	},
  	init:function(){
- 		this.$the_window = window;
- 		this.$body = document.body;
-
+ 		
  		sizeResize.getCurrent(sizeResize.getWidth());
  		sizeResize.runFunctions();
 
